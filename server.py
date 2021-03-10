@@ -57,5 +57,6 @@ def roll_at_table(table_name, username):
     r = Roll(value = roll, user_id = user.id, table_id = table.id)
     db.session.add(r)
     db.session.commit()
-    return f'{r.value} {r.user_id} {r.timestamp}'
+    # return f'{r.value} {r.user_id} {r.timestamp}'
+    return row2dict(r)
 
